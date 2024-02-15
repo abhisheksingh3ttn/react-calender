@@ -1,0 +1,36 @@
+.rbc-calendar {
+    font-family: sans-serif;
+}
+.rbc-month-row {
+    .rbc-row-content {
+        .rbc-row{
+            .rbc-event:has(.yet_to_start) {
+                background-color: rgb(95, 160, 145);
+            }
+            .rbc-event.rbc-selected:has(.yet_to_start) {
+                background-color: rgb(34, 140, 115);
+            }
+            .rbc-event:has(.in_progress) {
+                background-color: rgb(192, 252, 132);
+                color: #000;
+            }
+            .rbc-event.rbc-selected:has(.in_progress) {
+                background-color: rgb(153, 255, 51);
+                color: #000;
+            }
+            .rbc-event:has(.completed) {
+                background-color: rgb(182, 121, 237);
+            }
+            .rbc-event.rbc-selected:has(.completed) {
+                background-color: rgb(161, 68, 246);
+            }
+            .rbc-event:has(.no_status) {
+                background-color: rgb(223, 117, 117);
+            }
+            .rbc-event.rbc-selected:has(.no_status) {
+                background-color: rgb(202, 71, 71);
+            }
+            
+        }
+    }
+}
