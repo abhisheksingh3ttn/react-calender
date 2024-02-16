@@ -1,31 +1,147 @@
 .rbc-calendar {
     font-family: sans-serif;
 }
-.rbc-month-row {
+.rbc-month-row, .rbc-time-view {
     .rbc-row-content {
         .rbc-row{
-            .rbc-event:has(.yet_to_start) {
+            .rbc-event {
+                .rbc-event-content {
+                    font-size: 12px;
+                }
+            }
+            
+            .rbc-event:has(.yet_to_start-0) {
                 background-color: rgb(95, 160, 145);
+            }
+            .rbc-event:has(.yet_to_start-1) {
+                background-color: rgb(80, 135, 122);
+            }
+            .rbc-event:has(.yet_to_start-2) {
+                background-color: rgb(70, 162, 140);
+            }
+            .rbc-event:has(.yet_to_start-3) {
+                background-color: rgb(48, 163, 136);
+            }
+            .rbc-event:has(.yet_to_start-4) {
+                background-color: rgb(22, 171, 136);
+            }
+            .rbc-event:has(.yet_to_start-5) {
+                background-color: rgb(66, 114, 103);
+            }
+            .rbc-event:has(.yet_to_start-6) {
+                background-color: rgb(75, 118, 108);
+            }
+            .rbc-event:has(.yet_to_start-7) {
+                background-color: rgb(60, 113, 100);
+            }
+            .rbc-event:has(.yet_to_start-8) {
+                background-color: rgb(12, 162, 127);
             }
             .rbc-event.rbc-selected:has(.yet_to_start) {
                 background-color: rgb(34, 140, 115);
             }
-            .rbc-event:has(.in_progress) {
+
+
+            .rbc-event:has(.in_progress-0) {
                 background-color: rgb(192, 252, 132);
                 color: #000;
             }
-            .rbc-event.rbc-selected:has(.in_progress) {
-                background-color: rgb(153, 255, 51);
+            .rbc-event:has(.in_progress-1) {
+                background-color: rgb(201, 253, 149);
                 color: #000;
             }
-            .rbc-event:has(.completed) {
+            .rbc-event:has(.in_progress-2) {
+                background-color: rgb(186, 253, 119);
+                color: #000;
+            }
+            .rbc-event:has(.in_progress-3) {
+                background-color: rgb(178, 254, 102);
+                color: #000;
+            }
+            .rbc-event:has(.in_progress-4) {
+                background-color: rgb(162, 215, 108);
+                color: #000;
+            }
+            .rbc-event:has(.in_progress-5) {
+                background-color: rgb(167, 198, 136);
+                color: #000;
+            }
+            .rbc-event:has(.in_progress-6) {
+                background-color: rgb(136, 249, 22);
+                color: #000;
+            }
+            .rbc-event:has(.in_progress-7) {
+                background-color: rgb(150, 253, 47);
+                color: #000;
+            }
+            .rbc-event:has(.in_progress-8) {
+                background-color: rgb(170, 252, 89);
+                color: #000;
+            }
+            .rbc-event.rbc-selected:has(.in_progress) {
+                background-color: rgb(127, 194, 60);
+                color: #000;
+            }
+
+            
+            .rbc-event:has(.completed-0) {
                 background-color: rgb(182, 121, 237);
             }
-            .rbc-event.rbc-selected:has(.completed) {
-                background-color: rgb(161, 68, 246);
+            .rbc-event:has(.completed-1) {
+                background-color: rgb(187, 131, 237);
             }
-            .rbc-event:has(.no_status) {
-                background-color: rgb(223, 117, 117);
+            .rbc-event:has(.completed-2) {
+                background-color: rgb(115, 64, 159);
+            }
+            .rbc-event:has(.completed-3) {
+                background-color: rgb(178, 91, 253);
+            }
+            .rbc-event:has(.completed-4) {
+                background-color: rgb(165, 111, 211);
+            }
+            .rbc-event:has(.completed-5) {
+                background-color: rgb(144, 28, 246);
+            }
+            .rbc-event:has(.completed-6) {
+                background-color: rgb(154, 46, 250);
+            }
+            .rbc-event:has(.completed-7) {
+                background-color: rgb(159, 104, 206);
+            }
+            .rbc-event:has(.completed-8) {
+                background-color: rgb(113, 59, 159);
+            }
+            .rbc-event.rbc-selected:has(.completed) {
+                background-color: rgb(121, 52, 185);
+            }
+
+
+            .rbc-event:has(.no_status-0) {
+                background-color: rgb(234, 89, 89);
+            }
+            .rbc-event:has(.no_status-1) {
+                background-color: rgb(248, 95, 95);
+            }
+            .rbc-event:has(.no_status-2) {
+                background-color: rgb(249, 68, 68);
+            }
+            .rbc-event:has(.no_status-3) {
+                background-color: rgb(206, 92, 92);
+            }
+            .rbc-event:has(.no_status-4) {
+                background-color: rgb(183, 100, 100);
+            }
+            .rbc-event:has(.no_status-5) {
+                background-color: rgb(179, 72, 72);
+            }
+            .rbc-event:has(.no_status-6) {
+                background-color: rgb(212, 62, 62);
+            }
+            .rbc-event:has(.no_status-7) {
+                background-color: rgb(248, 90, 90);
+            }
+            .rbc-event:has(.no_status-8) {
+                background-color: rgb(252, 112, 112);
             }
             .rbc-event.rbc-selected:has(.no_status) {
                 background-color: rgb(202, 71, 71);
