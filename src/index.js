@@ -5,20 +5,24 @@ import moment from "moment";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import './calender.scss';
 import {data} from "./processData";
+import { reviewStatus } from "./constants";
 
 const localizer = momentLocalizer(moment);
 
 function App() {
+
+    const [stateData, setStateData] = useState(data);
+
     function filterMap (status) {
-        return data.filter(item => item.reviewStatus === status).map((item, index) => {
+        return stateData.filter(item => item.reviewStatus === status).map((item, index) => {
             item.dataClass = `${item.reviewStatus}-${index}`;
             return item;
         });
     }
-    const yetToStartResult = filterMap('YET_TO_START');
-    const inProgressResult = filterMap('IN_PROGRESS');
-    const noStatusResult = filterMap('NO_STATUS');
-    const completedResult = filterMap('COMPLETED');
+    const yetToStartResult = filterMap(reviewStatus.YET_TO_START);
+    const inProgressResult = filterMap(reviewStatus.IN_PROGRESS);
+    const noStatusResult = filterMap(reviewStatus.NO_STATUS);
+    const completedResult = filterMap(reviewStatus.COMPLETED);
     const dataResult = yetToStartResult.concat(inProgressResult, noStatusResult, completedResult);
 
     const eventResult = dataResult.map((item, index) => {
@@ -44,8 +48,11 @@ function App() {
   };
 
   return (
-    <div className="App" style={{ minHeight: 580}}>
-        
+    <div className="App" style={{ minHeight: 580, display : 'flex'}}>
+        {/* <div style={{ width: '15%', height: 'auto', border: '1px solid #000'}}>
+            {{}}
+        </div> */}
+        <div style={{ width: '100%'}}>
         <Calendar
             localizer={localizer}
             defaultDate={new Date()}
@@ -53,7 +60,9 @@ function App() {
             events={eventResult}
             style={{ height: "100vh" }}
             components={{event}}
+            onSelectEvent={event => alert(event.title)}
         />
+        </div>
     </div>
   );
 }

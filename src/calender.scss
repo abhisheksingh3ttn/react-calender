@@ -84,32 +84,42 @@
             }
 
             
-            .rbc-event:has(.completed-0) {
-                background-color: rgb(182, 121, 237);
-            }
             .rbc-event:has(.completed-1) {
-                background-color: rgb(187, 131, 237);
+                //background-color: rgb(95, 160, 145);
+                background-color: #006400;
             }
             .rbc-event:has(.completed-2) {
-                background-color: rgb(115, 64, 159);
+                //background-color: rgb(80, 135, 122);
+                background-color: #228B22;
             }
             .rbc-event:has(.completed-3) {
-                background-color: rgb(178, 91, 253);
+                //background-color: rgb(115, 64, 159);
+                //background-color: rgb(70, 162, 140);
+                background-color: #2E8B57;
             }
             .rbc-event:has(.completed-4) {
-                background-color: rgb(165, 111, 211);
+                //background-color: rgb(178, 91, 253);
+                //background-color: rgb(74, 235, 198);
+                background-color: #32CD32;
             }
             .rbc-event:has(.completed-5) {
-                background-color: rgb(144, 28, 246);
+                background-color: #3CB371;
+                //background-color: rgb(66, 114, 103);
             }
             .rbc-event:has(.completed-6) {
-                background-color: rgb(154, 46, 250);
+                background-color: rgb(75, 118, 108);
             }
             .rbc-event:has(.completed-7) {
-                background-color: rgb(159, 104, 206);
+                background-color: rgb(154, 46, 250);
             }
             .rbc-event:has(.completed-8) {
-                background-color: rgb(113, 59, 159);
+                background-color: rgb(159, 104, 206);
+            }
+            .rbc-event:has(.completed-9) {
+                background-color: rgb(12, 162, 127);
+            }
+            .rbc-event:has(.completed-10) {
+                background-color: rgb(7, 113, 88);
             }
             .rbc-event.rbc-selected:has(.completed) {
                 background-color: rgb(121, 52, 185);
